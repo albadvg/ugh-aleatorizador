@@ -17,9 +17,14 @@ export class AdditemComponent {
 
   newName!:string;
   itemRepetido:boolean = false;
+  itemVacio:boolean = false;
 
   sendItem() {
-    if(!this.service.items.some(item => item.name === this.newName)) {
+    if (this.newName.length === 0) {
+      this.itemRepetido = false;
+      this.itemVacio = true;
+    } else if(!this.service.items.some(item => item.name === this.newName) ) {
+      this.itemVacio = false;
       this.itemRepetido = false;
       this.service.items.push({
         name:this.newName,
@@ -27,6 +32,7 @@ export class AdditemComponent {
       })
       this.newName = '';
     } else {
+
       this.itemRepetido = true;
     }
   }

@@ -1,5 +1,7 @@
 <div class="container">
     <input type="text" [(ngModel)]="newName">
     <p [ngClass]="{showMsg: itemRepetido}">Este item ya existe. Si quieres agregar más aumenta el número en su contador</p>
+    <p [ngClass]="{showMsg: itemVacio}">El item está vacío. Introduce un nombre</p>
+
     <button (click)="sendItem()">AÑADIR</button>
 </div>
