@@ -18,16 +18,18 @@ export class ShuffleComponent {
   constructor(private service:ItemsService, private router:Router) {}
 
   public showItem() {
-    if(this.service.itemsSpread.length > 0) {
       let randomIndex = Math.floor(Math.random() * this.service.itemsSpread.length);
       this.result = this.service.itemsSpread.splice(randomIndex, 1)[0];
       this.showResult = true;
+    
+  }
+
+  public showQuestion() {
+    if(this.service.itemsSpread.length > 0) {
+      this.showResult = false;
     } else {
       this.router.navigate(['/'])
     }
   }
 
-  public showQuestion() {
-    this.showResult = false;
-  }
 }
