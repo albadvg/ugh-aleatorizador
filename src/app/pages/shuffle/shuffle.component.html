@@ -1,0 +1,11 @@
+<main>
+    <div class="question-marks animate__animated animate__bounce" [ngClass]="{hidden : showResult}">
+        <!-- <p>¿</p> -->
+        <p>?</p>
+    </div>
+    <div class="result" [ngClass]="{hidden : !showResult}">
+        <h1>{{result}}</h1>
+    </div>
+    <button (click)="showItem()" [ngClass]="{hidden : showResult}">MOSTRAR</button>
+    <button (click)="showQuestion()" [ngClass]="{hidden : !showResult}">SIGUIENTE</button>
+</main>

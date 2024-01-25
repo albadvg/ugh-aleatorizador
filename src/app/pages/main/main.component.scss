@@ -1,0 +1,36 @@
+main {
+    background-color: #284f32;
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 6px;
+    }
+
+    div {
+        padding: 30px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        border: 1px solid #ffb566;
+    }
+
+    @media screen and (min-width:900px) {
+        h1 {
+            font-size: 50px;
+            letter-spacing: 6px;
+        }
+
+        div {
+            width: 700px;
+        }
+    }
+
+}

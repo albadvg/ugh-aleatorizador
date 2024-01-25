@@ -1,0 +1,52 @@
+main {
+    background-color: #284f32;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    .question-marks {
+        border: 1px solid #ffb566;
+        padding: 20px;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 30px;
+        margin-top: auto;
+        justify-content: center;
+
+        p {
+            font-size: 100px;
+            animation: questionMark 1s infinite;
+        }
+
+        
+    }
+
+    .result {
+        margin-top: auto;
+        animation: questionMark 1s forwards;
+
+    }
+
+    button {
+        flex-grow: 0;
+        margin-top: auto;
+    }
+
+}
+
+.hidden {
+    display: none!important;
+}
+@keyframes questionMark {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+

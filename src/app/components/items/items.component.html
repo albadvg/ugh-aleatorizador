@@ -1,0 +1,13 @@
+<div class="container">
+    @for(item of items; track $index) {
+        <div class="item">
+            <input type="text" value="{{item.name}}">
+            <div class="btns-wrap">
+                <button (click)="changeQty($index, -1)"><</button>
+                <p>{{item.qty}}</p>
+                <button (click)="changeQty($index, 1)">></button>
+                <button (click)="deleteItem($index)">X</button>
+            </div>
+        </div>
+    }
+</div>
